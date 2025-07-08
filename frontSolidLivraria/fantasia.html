@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Brasil</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body onload="carregarlivrosfantasia()">
+
+    <header>
+        <div id="header-black">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">São Paulo, BR</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href="#" class="titulo-menu">Categorias</a></li>
+                    <li><a href="esporte.html">esporte</a></li>
+                    <li><a href="ficcao.html">ficcao</a></li>
+                    <li><a href="romance.htm">romance</a></li>
+                    <li><a href="fantasia.html">fantasia</a></li>
+                    <li><a href="programacao.html">programação</a></li>
+                    <li><a href="carrinho.html" class="carrinho"> <img src="img/carrinho.png" alt="carrinho"></a></li>
+                    <li><a href="#" class="usuario" data-bs-toggle="modal" data-bs-target="#exampleModal">usuário</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="painel">
+            <form onsubmit="return false" id="pesquisa">
+                <input type="text" placeholder="Pesquise pelo título" id="pesquisa-titulo">
+                <button>
+                    <img src="img/lupa.png" alt="Clique para pesquisar">
+                </button>
+            </form>
+        </div>
+    </header>
+
+
+    <main>
+        <h2>Fantasia</h2>
+
+        <div id="lstlivros"></div>
+    </main>
+
+
+    <footer>
+
+        <div id="endereco">
+            Rua Padre Manoel Dantas, 78 - Vila Marciana <br>
+            CEP: 08690120 - São Paulo - SP <br>
+            Tel: 11 98373-9826 | 11 97263-9234 <br>
+            Contato Whatsapp <a href="https://wa.me/11979639924">11 97963-9924</a>
+        </div>
+
+        <div id="menufooter">
+            <nav>
+                <ul>
+                    <li><a href="#" class="titulo-menu">Categorias</a></li>
+                    <li><a href="esporte.html">esporte</a></li>
+                    <li><a href="ficcao.html">ficcao</a></li>
+                    <li><a href="romance.htm">romance</a></li>
+                    <li><a href="fantasia.html">fantasia</a></li>
+                    <li><a href="programacao.html">programação</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="redes-pagamento">
+            <div id="redes">
+                <a href="https://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.png" alt="youtube"></a>
+            </div>
+            <div id="pagamento">
+                <img src="img/formaspagamento.png" alt="pagamento">
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form onsubmit="return false">
+                        <input type="text" class="form-control mb-3" id="txtusuario" placeholder="Usuario" required>
+                        <input type="password" placeholder="Senha" id="txtpassword" class="form-control" id="Senha" required>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnlogar" onclick="efetuarlogin()">Logar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
